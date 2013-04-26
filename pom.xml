@@ -5,6 +5,21 @@
   <artifactId>mysql-logger</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>MySQL Profiling Logger</name>
+  <scm>
+    <connection>scm:git:https://github.com/ox-it/mysql-logger.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/ox-it/mysql-logger.git</developerConnection>
+    <url>https://github.com/ox-it/mysql-logger</url>
+  </scm>
+  <distributionManagement>
+    <repository>
+      <id>maven-repo.oucs</id>
+      <url>http://maven-repo.oucs.ox.ac.uk/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>maven-repo.oucs(snapshots)</id>
+      <url>http://maven-repo.oucs.ox.ac.uk/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
   <dependencies>
     <dependency>
       <groupId>mysql</groupId>
