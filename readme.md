@@ -10,6 +10,11 @@ To use this code add the following to your JDBC connection string:
     &logger=uk.ac.ox.it.Log4JLogger&profilerEventHandler=uk.ac.ox.it.StatementLogging&profileSQL=true
 
 this will cause the Log4J logger to be used for MySQL logging and set the profiler to generate events for just executions.
+Queries will be logged at INFO level and slow queries will be logged at WARN level. To disable either of these you can
+supply additional arguments to the JDBC connection string:
+
+    logQueries=false
+    logSlowQueries=false
 
 To configure log4j if you're using >1.2.15 then you can add filters in your properties files and also add a filter so that a limited amount of SQL statements get logged:
 
