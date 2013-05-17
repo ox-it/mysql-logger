@@ -1,9 +1,7 @@
 MySQL Logging
 -------------
 
-This project adds some aditional support for logging MySQL statements from the JDBC connector.
-This will add additional overhead as when profiling isn't enabled the connector shortcuts code concernced with creating the profiling events.
-This has be written to support logging of a sample of SQL statements to log4j although the MySQL connector ships with support for logging to other logging frameworks.
+This is for use with the MySQL Connector/J JDBC driver (http://dev.mysql.com/downloads/connector/j/). This project adds some aditional support for logging MySQL statements from the JDBC connector. This will add additional overhead as when profiling isn't enabled the connector shortcuts code concernced with creating the profiling events. This has be written to support logging of a sample of SQL statements to log4j although the MySQL connector ships with support for logging to other logging frameworks.
 
 To use this code add the following to your JDBC connection string:
 
@@ -31,4 +29,7 @@ To configure log4j if you're using >1.2.15 then you can add filters in your prop
     log4j.logger.MySQL=INFO, sample
     log4j.additivity.MySQL=false
 
+Watch out for using this in production as the MySQL Connector/J has a know memory leak when connections fail:
+
+http://bugs.mysql.com/bug.php?id=55680
 
